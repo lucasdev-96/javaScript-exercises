@@ -246,9 +246,59 @@ console.log('Exercicio 18', returnSumOfProducts([
 
   console.log('Exercicio 19', media([30, 10]))
 
+//   Faça uma função que recebe a base e a altura de um triângulo e retorne a área desse triângulo. A precisão
+// deverá ser de duas casas decimais, arredondando se necessário.
+
   const returnTriangulo = (base, altura) => {
     const result = base * altura / 2
    return result.toFixed(2)
   }
 
 console.log('Exercicio 20', returnTriangulo(9.25, 13.1))
+
+// Faça uma função que recebe a base e a altura de um triângulo e retorne a área desse triângulo. A precisão
+// deverá ser de duas casas decimais, arredondando se necessário.
+
+const returnSmallValue = (array) => {
+  // return Math.min.apply(Math, array)
+//   let number = 0;
+//   for(let index = 0; index < array.length; index++) {
+//     if(array[index] < number) number = array[index]
+//   }
+// return number
+ return array.reduce((acc, value) => {
+   if(acc < value) return acc;
+   else return value
+ })
+}
+
+console.log('Exercicio 21', returnSmallValue([5, 10, 50, 3]))
+
+// Desenvolva uma função que receba como parâmetro um número de 1 a 10. Internamente, na função, será
+// gerado um número aleatório de 1 a 10. A função deverá retornar se o parâmetro de entrada foi igual ao número
+// sorteado internamente. Se o valor fornecido foi o sorteado, retorne "Parabéns! O número sorteado foi o X". Se
+// não for igual, retorne "Que pena! O número sorteado foi o X". X é o número que foi sorteado.
+
+const returnSortNumber = (number) => {
+  const sortNumber = Math.ceil(Math.random() * 10)
+  const one = 1;
+  const ten = 10;
+   if(number >= one && number <= ten ) {
+     switch(number) {
+       case sortNumber:
+         return `Parabéns! O número sorteado foi o ${sortNumber}`
+         default:
+           return `Que pena! O número sorteado foi o ${sortNumber}`
+     }
+   }else return 'Insira um número de um a 10'
+}
+console.log('Exercicio 22', returnSortNumber(5))
+
+
+// Criar uma função que receba uma string como parâmetro e conte quantas palavras tem nela.
+
+const countPhrases = (str) => {
+return str.split(' ').length
+}
+
+console.log('Exercicio 22', countPhrases('Oi Tudo Bem'))
