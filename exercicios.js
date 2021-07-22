@@ -301,4 +301,41 @@ const countPhrases = (str) => {
 return str.split(' ').length
 }
 
-console.log('Exercicio 22', countPhrases('Oi Tudo Bem'))
+console.log('Exercicio 23', countPhrases('Oi Tudo Bem'))
+
+// Desenvolva uma função que recebe um caractere e uma string como parâmetros e retorne a quantidade de
+// vezes que o caractere se repete na string. A função deverá ser case-sensitive, ou seja, irá diferenciar
+// maiúsculas de minúsculas.
+
+
+const returnXLetra = (caractere, str) => {
+  const array = str.split('')
+ return array.filter((elem) => elem === caractere ).length
+}
+
+console.log('Exercicio 24', returnXLetra('e', 'A sorte favorece os audazes'))
+
+
+// A fim de criar um mecanismo de busca para sua aplicação, você precisa iniciar criando uma função para
+// identificar palavras semelhantes.
+// Escreva uma função que recebe como primeiro parâmetro uma palavra e, como segundo parâmetro, um array
+// de strings. A função deverá filtrar as palavras do array que contêm nelas a string do primeiro parâmetro.
+
+const filterArray = (str, array) => {
+ return array.filter((elem) => elem.includes(str))
+}
+
+console.log('Exercicio 25', filterArray("ja", ["javascript", "java", "c++"]))
+
+
+// Desenvolva uma função que receba uma string como parâmetro e retorne essa string somente com as
+// consoantes, ou seja, sem as vogais.
+
+
+const removeVogais = (str) => {
+return str
+.split('')
+.filter((ele) => ele !== 'a' && ele !== 'e' && ele !== 'i' && ele !== 'o' && ele !== 'u')
+.join('')
+}
+console.log('Exercicio 26', removeVogais('Fundamentos'))
