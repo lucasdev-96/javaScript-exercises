@@ -216,3 +216,39 @@ const sumArray = (array) => {
 }
 
 console.log('Exercicio 17:', sumArray([100,100,100,100]))
+
+// Você está trabalhando numa aplicação pessoal de controle de despesas. Na tela principal dessa aplicação, é
+// possível adicionar produtos ou serviços, informando nome, categoria e preço. Uma funcionalidade que você
+// está desenvolvendo no momento é a de somar o total das despesas.
+// Crie uma função que receba um array de produtos e retorne o total das despesas.
+
+const returnSumOfProducts = (arrayOfObj) => {
+  return arrayOfObj.reduce((acc, {preco}) => acc + preco, 0).toFixed(2);
+}
+
+console.log('Exercicio 18', returnSumOfProducts([
+  {nome: "Jornal online", categoria: "Informação", preco: 89.99},
+  {nome: "Cinema", categoria: "Entretenimento", preco: 150},
+  {nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99},
+  {nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90}
+  ]))
+
+// Numa aplicação Web de investimento financeiro da qual você faz parte da equipe de desenvolvimento,
+// pretende-se adicionar a funcionalidade de calcular a média de um conjunto de números informados pelo
+// usuário.
+// Com o intuito de realizar esse cálculo, crie uma função que receba um array com uma quantidade
+// indeterminada de números e retorne a média simples desses números.
+
+
+  const media = (array) => {
+    return array.reduce((sum, ele) => sum + ele, 0) / array.length;
+  }
+
+  console.log('Exercicio 19', media([30, 10]))
+
+  const returnTriangulo = (base, altura) => {
+    const result = base * altura / 2
+   return result.toFixed(2)
+  }
+
+console.log('Exercicio 20', returnTriangulo(9.25, 13.1))
