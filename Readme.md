@@ -1,4 +1,4 @@
-<h1>javaScript Exercises</h1>
+<h1>Repositorio de exercicios JavaScript</h1>
 
 <img src="./tenor.gif">
 
