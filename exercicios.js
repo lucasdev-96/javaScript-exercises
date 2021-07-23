@@ -338,4 +338,27 @@ return str
 .filter((ele) => ele !== 'a' && ele !== 'e' && ele !== 'i' && ele !== 'o' && ele !== 'u')
 .join('')
 }
-console.log('Exercicio 26', removeVogais('Fundamentos'))
+console.log('Exercicio 26', removeVogais('Fundáméntos'))
+
+// Desenvolva uma função que recebe um objeto como parâmetro e retorne um outro objeto que corresponde ao
+// ao objeto recebido como parâmetro, porém com as posições das chaves e valores invertidas, conforme
+// exemplo a seguir:
+
+const changeKeys = (obj) => {
+ return Object.entries(obj)
+ .map((ele) => ({[ele[1]]: ele[0]}))
+ .reduce((ant, att) => ({...ant, ...att}) , {})
+}
+
+console.log('Exercicio 27', changeKeys({ a: 1, b: 2, c: 3})[2]);
+
+
+// Elabore uma função que recebe dois parâmetros: o primeiro é um array de números e o segundo é um número
+// que especifica uma quantidade de dígitos. Essa função deverá retornar somente aqueles números do array que
+// têm a quantidade de dígitos indicada pelo segundo parâmetro
+
+const filterBYSize =  (array, number) => {
+ return array.filter((ele) => ele.toString().length === number )
+}
+
+ console.log('Exercicio 28', filterBYSize([5, 9, 1, 125, 11], 1))
